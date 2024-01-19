@@ -1,0 +1,23 @@
+<manifest>
+  <remote name="tiiuae" fetch="ssh://git@github.com/tiiuae/"/>
+  <remote name="github" fetch="https://github.com/"/>
+  <remote name="yocto" fetch="https://git.yoctoproject.org/git/"/>
+  <remote name="oe" fetch="https://github.com/openembedded/"/>
+
+  <project remote="tiiuae" name="meta-pkvm.git" path="vm-images/meta-pkvm" revision="master"/>
+
+  <!-- TII build system -->
+  <project remote="tiiuae" name="tii_pkvm_build.git" path="tii_pkvm_build" revision="master">
+    <linkfile src="configs" dest="configs"/>
+    <linkfile src="docker" dest="docker"/>
+    <linkfile src="Makefile" dest="Makefile"/>
+    <linkfile src="scripts" dest="scripts"/>
+    <linkfile src="yocto/setup.sh" dest="vm-images/setup.sh"/>
+    <linkfile src="yocto/setup-mirror-update.sh" dest="vm-images/setup-mirror-update.sh"/>
+    <linkfile src="README.md" dest="README.md"/>
+  </project>
+
+  <project remote="yocto" name="poky" path="vm-images/poky" revision="refs/tags/nanbield-4.3.2"/>
+  <project remote="oe" name="meta-openembedded" path="vm-images/meta-openembedded" revision="nanbield"/>
+
+</manifest>
