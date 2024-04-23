@@ -4,20 +4,21 @@
   <remote name="yocto" fetch="https://git.yoctoproject.org/git/"/>
   <remote name="oe" fetch="https://github.com/openembedded/"/>
 
-  <project remote="tiiuae" name="meta-pkvm.git" path="vm-images/meta-pkvm" revision="master"/>
+  <project remote="tiiuae" name="meta-sel4.git" path="vm-images/meta-virt" revision="pkvm"/>
 
   <!-- TII build system -->
-  <project remote="tiiuae" name="tii_pkvm_build.git" path="tii_pkvm_build" revision="master">
+  <project remote="tiiuae" name="tii_sel4_build.git" path="tii_virt_build" revision="pkvm">
     <linkfile src="configs" dest="configs"/>
     <linkfile src="docker" dest="docker"/>
     <linkfile src="Makefile" dest="Makefile"/>
     <linkfile src="scripts" dest="scripts"/>
     <linkfile src="yocto/setup.sh" dest="vm-images/setup.sh"/>
     <linkfile src="yocto/setup-mirror-update.sh" dest="vm-images/setup-mirror-update.sh"/>
+    <linkfile src="yocto/conf" dest="vm-images/conf"/>
     <linkfile src="README.md" dest="README.md"/>
   </project>
 
-  <project remote="yocto" name="poky" path="vm-images/poky" revision="refs/tags/nanbield-4.3.2"/>
-  <project remote="oe" name="meta-openembedded" path="vm-images/meta-openembedded" revision="nanbield"/>
-
+  <!-- tips of 'scarthgap' branches as of 202404241224 UTC+3 -->
+  <project remote="yocto" name="poky" path="vm-images/poky" revision="110ee701b33600f14e40544bf9354774cd85c5ce"/>
+  <project remote="oe" name="meta-openembedded" path="vm-images/meta-openembedded" revision="cf942682b8ff5b30393f1f60a1a4d37571c0d1ba"/>
 </manifest>
