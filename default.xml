@@ -18,7 +18,10 @@
     <linkfile src="README.md" dest="README.md"/>
   </project>
 
-  <!-- tips of 'scarthgap' branches as of 202404241224 UTC+3 -->
-  <project remote="yocto" name="poky" path="vm-images/poky" revision="110ee701b33600f14e40544bf9354774cd85c5ce"/>
-  <project remote="oe" name="meta-openembedded" path="vm-images/meta-openembedded" revision="cf942682b8ff5b30393f1f60a1a4d37571c0d1ba"/>
+  <!-- tips of 'scarthgap' branches as of 202404231553 UTC+3 -->
+  <project remote="yocto" name="poky" path="vm-images/poky" revision="fb91a49387cfb0c8d48303bb3354325ba2a05587"/>
+  <project remote="oe" name="meta-openembedded" path="vm-images/meta-openembedded" revision="6819f825caf750b4deac5d8dda1b81f3380615be"/>
+
+  <!-- tip of 'wip-l4t-r36.2.0-dp' as of 202404231553 UTC+3 -->
+  <project remote="github" name="OE4T/meta-tegra" path="vm-images/meta-tegra" revision="30a4b71099acb8eb85cb78057cbe442e8160b753"/>
 </manifest>
